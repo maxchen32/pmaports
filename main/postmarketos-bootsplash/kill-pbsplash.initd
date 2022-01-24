@@ -1,0 +1,9 @@
+#!/sbin/openrc-run
+supervisor=supervise-daemon
+name="Kill pbsplash"
+description="Kill pbsplash"
+command="killall pbsplash"
+
+depend() {
+	after agetty.tty1
+}
