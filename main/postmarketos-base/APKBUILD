@@ -1,6 +1,6 @@
 pkgname=postmarketos-base
-pkgver=21
-pkgrel=2
+pkgver=22
+pkgrel=0
 pkgdesc="Meta package for minimal postmarketOS base"
 url="https://postmarketos.org"
 arch="noarch"
@@ -45,6 +45,7 @@ _source644="
 	etc/conf.d/syslog
 	etc/fstab
 	etc/issue
+	etc/inittab
 	etc/motd
 	etc/os-release
 	etc/sysctl.d/disable-rp-filter.conf
@@ -115,6 +116,7 @@ e0d2d48b82a03239a4c0a00acaf83e00d397c23a8d7c71053d4e2a383357c22dcedef9e81b0e12a1
 e4576c58c35f80bedddb1e89e186f37d31a186d3e9eb046581b8c5d7b7d435e18924539e851d3e67dc0ede80f9d44d16bd9ef52e73350d3f13224edc31d73a34  rootfs-etc-conf.d-syslog
 9b8d0493bb64457fe176fea801e0771d3c5279302c61559824bf81b3d2b66d2c1e076f4aaac65f55389005acb18c27e44bed858c2bdbad37d74199f07c86c354  rootfs-etc-fstab
 45bd0742a64a9d3c4a88e152b97edcf3fa1edca28884f9ea69e7c4c365f1e41ef9056dbe204545de7d4b2ba92e1e5872b2a929c2dcc1dd468e627cc3f090b8e6  rootfs-etc-issue
+1796ccc92ca4c475abaedf0c03e41e795fb25ada5dfbed947c255c63fb99f6e4341c6bb758aea118b728b7e38e90f1b12d9787bdd634a7305eeeeaa930b26ff0  rootfs-etc-inittab
 01403df3b5a2be0dd70387a3c32cf24a77bc097679fbefca585082a0970b7d756723c33687be3809351b5e31c85947db84861118bfeced8f5f865fe2452555ec  rootfs-etc-motd
 093c201f0c7aa203df447f2a8c27e5834520a7016ce2934ddc35fb037d2ec9acf0f7df7c06e07ad24ba7b4d94ef21fe7ff848c58bd62277eeeb08659fbddf1e9  rootfs-etc-os-release
 b70ee1b39b5f33c9a3e6bf4259158519691c82c8cefb700d4df49eb749a2cce208082e00d4905b9eea2c4f75b6da62f73931931c92157b4132adb35dcf0e0a6f  rootfs-etc-sysctl.d-disable-rp-filter.conf

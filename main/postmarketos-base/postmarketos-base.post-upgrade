@@ -3,3 +3,13 @@
 # Otherwise it will enable services, as listed in that file. And we don't want
 # this to happen during upgrade, especially not automatically enabling the sshd
 # service! (build.postmarketos.org#85)
+
+# Add gettys if upgrading to v22
+
+if ! test -f /etc/init.d/agetty.tty1; then
+	# Enable gettys
+	for n in $(seq 1 6); do
+		ln -s /etc/init.d/agetty /etc/init.d/agetty.tty$n
+		rc-update -q add agetty.tty$n default
+	done
+fi

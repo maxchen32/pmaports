@@ -6,6 +6,12 @@ rc-update add udev-trigger sysinit
 rc-update add udev-settle sysinit
 rc-update add udev-postmount default
 
+# Enable gettys
+for n in $(seq 1 6); do
+	ln -s /etc/init.d/agetty /etc/init.d/agetty.tty$n
+	rc-update -q add agetty.tty$n default
+done
+
 # Enable other OpenRC services
 for service in devfs dmesg; do
 	rc-update -q add $service sysinit
